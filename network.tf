@@ -3,8 +3,8 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "example" {
-  name     = "my-resources"
-  location = "West Europe"
+  name     = "${var.prefix}-workshop"
+  location = var.location
 }
 
 module "network" {
